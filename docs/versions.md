@@ -1,5 +1,30 @@
 # Versions
 
+## v0.2.0 - Navigation System
+
+Release date: 2026-11-13
+
+Features:
+
+- Product-oriented navigation system implemented
+- AI Assistant section added
+- Notes section added
+- Automations section added
+- User Profile section added
+- Support Nexus section added
+- Settings section added
+- About section redesigned
+- Multi-language architecture introduced
+- Locales structure prepared (EN, ES, RU, KA)
+- Future monetization modules architecture prepared:
+  - Wallet
+  - Payments
+  - Subscriptions
+- Future automation modules architecture prepared
+- Improved user experience and interface
+
+---
+
 ## v0.1.1 - Telegram Core
 
 Release date: 2026-11-12
