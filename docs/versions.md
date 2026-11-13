@@ -1,5 +1,26 @@
 # Versions
 
+## v0.3.0 - User Profiles
+
+Release date: 2026-11-13
+
+Features:
+
+- User Model implemented
+- User Store implemented
+- User Service implemented
+- Automatic user creation
+- User Profile section upgraded
+- Telegram ID support added
+- Multi-language profile support
+- Registration Date tracking
+- Last Activity tracking
+- Foundation for subscriptions
+- Foundation for NX Credits
+- Foundation for future database integration
+
+---
+
 ## v0.2.0 - Navigation System
 
 Release date: 2026-11-13

@@ -1,16 +1,35 @@
+const languageMap = {
+  en: "🇬🇧 English",
+  es: "🇪🇸 Spanish",
+  ru: "🇷🇺 Russian",
+  ka: "🇬🇪 Georgian",
+};
+const {
+  getOrCreateUser,
+  updateLastActivity,
+} = require("../services/users/userService");
+
 async function profileCommand(ctx) {
-  const username = ctx.from.username || "Unknown";
+  const user = getOrCreateUser(ctx.from);
+  updateLastActivity(user.id);
 
   await ctx.reply(
     `👤 Profile
 
-Username: @${username}
+Username: @${user.username}
+Telegram ID: ${user.id}
 
-Subscription: Free
+Language: ${languageMap[user.language]}
 
-NX Credits: 0
+Plan: ${user.subscription}
 
-Language: English`
+NX Credits: ${user.nxCredits}
+
+Member Since:
+${user.registrationDate.toLocaleDateString()}
+
+Last Activity:
+${user.lastActivity.toLocaleDateString()}`
   );
 }
 

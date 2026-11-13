@@ -31,7 +31,7 @@ Nexus Assistant aims to combine:
 
 ## Current Version
 
-### v0.2.0 - Navigation System
+### v0.3.0 - User Profiles
 
 Implemented:
 
@@ -45,6 +45,9 @@ Implemented:
 - Settings Section
 - About Section
 - Multi-language Architecture
+- User Profiles
+- User Activity Tracking
+- User Registration System
 
 ## Roadmap
 
