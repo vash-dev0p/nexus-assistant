@@ -1,6 +1,19 @@
 async function aboutCommand(ctx) {
   await ctx.reply(
-    "🤖 Nexus Assistant\n\nA long-term portfolio project evolving into an AI-powered assistant platform."
+    `ℹ️ About Nexus Assistant
+
+Personal AI & Automation Assistant.
+
+Languages:
+
+🇬🇧 English
+🇪🇸 Spanish
+🇷🇺 Russian
+🇬🇪 Georgian
+
+Current Version:
+
+v0.2.0 Navigation System`
   );
 }
 
