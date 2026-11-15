@@ -2,6 +2,8 @@ require("dotenv").config();
 
 const { Bot } = require("grammy");
 
+const initializeDatabase = require("./database/initDatabase");
+
 const startCommand = require("./commands/start");
 const helpCommand = require("./commands/help");
 const aboutCommand = require("./commands/about");
@@ -15,9 +17,13 @@ const settingsCommand = require("./commands/settings");
 
 const bot = new Bot(process.env.BOT_TOKEN);
 
+initializeDatabase();
+
 bot.command("start", startCommand);
 bot.command("help", helpCommand);
 bot.command("about", aboutCommand);
+
+bot.hears("🏠 Home", startCommand);
 
 bot.hears("🤖 AI Assistant", aiCommand);
 bot.hears("📝 Notes", notesCommand);
@@ -29,7 +35,8 @@ bot.hears("❤️ Support Nexus", supportCommand);
 bot.hears("⚙️ Settings", settingsCommand);
 
 bot.hears("ℹ️ About", aboutCommand);
+bot.hears("❓ Help", helpCommand);
 
 bot.start();
 
-console.log("✅ Nexus Assistant v0.2.0 started");
+console.log("✅ Nexus Assistant v0.4.1 started");

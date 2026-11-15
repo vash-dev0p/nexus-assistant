@@ -1,5 +1,21 @@
 # Versions
 
+## v0.4.1 - UX & Navigation Update
+
+Release date: 2026-11-15
+
+Features:
+
+- Home navigation button added
+- Main screen redesigned
+- Help section improved
+- User onboarding improved
+- Start flow improved
+- Navigation usability enhanced
+- Registration moved to application entry point
+
+---
+
 ## v0.3.0 - User Profiles
 
 Release date: 2026-11-13
