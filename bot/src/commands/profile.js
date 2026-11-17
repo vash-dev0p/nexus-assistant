@@ -1,9 +1,5 @@
-const languageMap = {
-  en: "🇬🇧 English",
-  es: "🇪🇸 Spanish",
-  ru: "🇷🇺 Russian",
-  ka: "🇬🇪 Georgian",
-};
+const languages =
+require("../constants/languages");
 const {
   getOrCreateUser,
   updateLastActivity,
@@ -19,7 +15,7 @@ async function profileCommand(ctx) {
 Username: @${user.username}
 Telegram ID: ${user.id}
 
-Language: ${languageMap[user.language]}
+Language: ${languages[user.language]}
 
 Plan: ${user.subscription}
 

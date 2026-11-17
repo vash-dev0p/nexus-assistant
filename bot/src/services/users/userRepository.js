@@ -60,7 +60,58 @@ function getUserById(userId, callback) {
   );
 }
 
+function updateLastActivity(userId) {
+  db.run(
+    `
+    UPDATE users
+    SET lastActivity = ?
+    WHERE id = ?
+    `,
+    [
+      new Date().toISOString(),
+      userId
+    ],
+    (err) => {
+      if (err) {
+        console.error(
+          "❌ Error updating last activity:",
+          err.message
+        );
+      } else {
+        console.log(
+          "✅ Last activity updated"
+        );
+      }
+    }
+  );
+}
+
+function updateLanguage(userId, language) {
+  db.run(
+    `
+    UPDATE users
+    SET language = ?
+    WHERE id = ?
+    `,
+    [language, userId],
+    (err) => {
+      if (err) {
+        console.error(
+          "❌ Error updating language:",
+          err.message
+        );
+      } else {
+        console.log(
+          `✅ Language updated: ${language}`
+        );
+      }
+    }
+  );
+}
+
 module.exports = {
   createUser,
   getUserById,
+  updateLastActivity,
+  updateLanguage,
 };

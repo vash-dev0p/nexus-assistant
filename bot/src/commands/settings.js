@@ -1,14 +1,27 @@
+const languages = require("../constants/languages");
+
+const {
+  getOrCreateUser,
+} = require("../services/users/userService");
+
+const languageKeyboard =
+  require("../keyboards/languageKeyboard");
+
 async function settingsCommand(ctx) {
+  const user = getOrCreateUser(ctx.from);
+
   await ctx.reply(
     `⚙️ Settings
 
-Available soon.
+🌍 Language Settings
 
-Future features:
+Current language:
+${languages[user.language]}
 
-• Language Selection
-• Notifications
-• User Preferences`
+Choose a language:`,
+    {
+      reply_markup: languageKeyboard,
+    }
   );
 }
 

@@ -3,6 +3,7 @@ const users = require("./usersStore");
 const {
   createUser: saveUserToDatabase,
   getUserById,
+  updateLastActivity: updateLastActivityInDatabase,
 } = require("./userRepository");
 
 function getOrCreateUser(telegramUser) {
@@ -29,10 +30,21 @@ function updateLastActivity(userId) {
 
   if (user) {
     user.lastActivity = new Date();
+
+    updateLastActivityInDatabase(userId);
+  }
+}
+
+function updateUserLanguage(userId, language) {
+  const user = users.get(userId);
+
+  if (user) {
+    user.language = language;
   }
 }
 
 module.exports = {
   getOrCreateUser,
   updateLastActivity,
+  updateUserLanguage,
 };

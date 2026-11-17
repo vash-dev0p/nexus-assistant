@@ -1,5 +1,22 @@
 # Versions
 
+## v0.4.2 - Language Settings
+
+Release date: 2026-11-17
+
+Features:
+
+- Language Settings screen added
+- Language keyboard implemented
+- SQLite language persistence implemented
+- User language update support added
+- Profile language synchronization implemented
+- Settings language synchronization implemented
+- Map cache synchronization improved
+- First fully functional user preference added
+
+---
+
 ## v0.4.1 - UX & Navigation Update
 
 Release date: 2026-11-15
