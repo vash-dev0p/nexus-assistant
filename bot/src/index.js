@@ -4,6 +4,10 @@ const { Bot } = require("grammy");
 
 const initializeDatabase = require("./database/initDatabase");
 
+const {
+  addNote,
+} = require("./services/notes/noteService");
+
 const startCommand = require("./commands/start");
 const helpCommand = require("./commands/help");
 const aboutCommand = require("./commands/about");
@@ -26,6 +30,10 @@ const {
 const bot = new Bot(process.env.BOT_TOKEN);
 
 initializeDatabase();
+
+const {
+  getUserNotes,
+} = require("./services/notes/noteService");
 
 bot.command("start", startCommand);
 bot.command("help", helpCommand);

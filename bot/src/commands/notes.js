@@ -1,16 +1,44 @@
+const {
+  getUserNotes,
+} = require("../services/notes/noteService");
+
+const notesKeyboard =
+  require("../keyboards/notesKeyboard");
+
 async function notesCommand(ctx) {
-  await ctx.reply(
-    `📝 Notes
+  getUserNotes(
+    ctx.from.id,
+    async (notes) => {
+      if (notes.length === 0) {
+        await ctx.reply(
+          `📝 Notes
 
-The Notes module is currently under development.
+No notes found.
 
-Future features:
+Create your first note soon.`
+        );
 
-• Quick Notes
-• Reminders
-• Personal Knowledge Base
+        return;
+      }
 
-Coming in future releases.`
+      let message =
+        `📝 Your Notes\n\n`;
+
+      notes.forEach((note, index) => {
+        message +=
+          `${index + 1}. ${note.title}\n`;
+      });
+
+      message +=
+        `\nTotal: ${notes.length} notes`;
+
+      await ctx.reply(
+        message,
+        {
+          reply_markup: notesKeyboard,
+        }
+      );
+    }
   );
 }
 
