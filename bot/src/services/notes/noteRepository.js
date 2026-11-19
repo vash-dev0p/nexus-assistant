@@ -64,7 +64,37 @@ function getNotesByUserId(userId, callback) {
   );
 }
 
+function deleteNoteById(
+  noteId,
+  callback
+) {
+  db.run(
+    `
+    DELETE FROM notes
+    WHERE id = ?
+    `,
+    [noteId],
+    function (err) {
+      if (err) {
+        console.error(
+          "❌ Error deleting note:",
+          err.message
+        );
+
+        callback(false);
+      } else {
+        console.log(
+          `✅ Note deleted: ${noteId}`
+        );
+
+        callback(true);
+      }
+    }
+  );
+}
+
 module.exports = {
   createNote,
   getNotesByUserId,
+  deleteNoteById,
 };

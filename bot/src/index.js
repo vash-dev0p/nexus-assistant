@@ -6,6 +6,8 @@ const initializeDatabase = require("./database/initDatabase");
 
 const {
   addNote,
+  getUserNotes,
+  deleteNote,
 } = require("./services/notes/noteService");
 
 const startCommand = require("./commands/start");
@@ -27,13 +29,15 @@ const {
   updateUserLanguage,
 } = require("./services/users/userService");
 
+const noteDeleteMode =
+  require("./services/notes/deleteModeStore");
+
+const noteCreationMode =
+  require("./services/notes/notesStore");
+
 const bot = new Bot(process.env.BOT_TOKEN);
 
 initializeDatabase();
-
-const {
-  getUserNotes,
-} = require("./services/notes/noteService");
 
 bot.command("start", startCommand);
 bot.command("help", helpCommand);
@@ -49,6 +53,33 @@ bot.hears("👤 Profile", profileCommand);
 
 bot.hears("❤️ Support Nexus", supportCommand);
 bot.hears("⚙️ Settings", settingsCommand);
+
+bot.hears(
+  "➕ Create Note",
+  async (ctx) => {
+
+    noteCreationMode.add(
+      ctx.from.id
+    );
+
+    await ctx.reply(
+      "📝 Send note text."
+    );
+  }
+);
+
+bot.hears(
+  "🗑 Delete Note",
+  async (ctx) => {
+    noteDeleteMode.add(
+      ctx.from.id
+    );
+
+    await ctx.reply(
+      "🗑 Send note ID to delete."
+    );
+  }
+);
 
 bot.hears("🇬🇧 English", async (ctx) => {
   updateLanguage(ctx.from.id, "en");
@@ -89,6 +120,66 @@ bot.hears("🇬🇪 Georgian", async (ctx) => {
 
 bot.hears("ℹ️ About", aboutCommand);
 bot.hears("❓ Help", helpCommand);
+
+bot.on("message:text", async (ctx) => {
+
+  if (
+    noteDeleteMode.has(ctx.from.id)
+  ) {
+    const noteId = Number(
+      ctx.message.text
+    );
+
+    deleteNote(
+      noteId,
+      async (success) => {
+
+        noteDeleteMode.delete(
+          ctx.from.id
+        );
+
+        if (success) {
+          await ctx.reply(
+            "✅ Note deleted."
+          );
+        } else {
+          await ctx.reply(
+            "❌ Note not found."
+          );
+        }
+      }
+    );
+
+    return;
+  }
+
+  if (
+    !noteCreationMode.has(
+      ctx.from.id
+    )
+  ) {
+    return;
+  }
+
+  const noteText =
+    ctx.message.text;
+
+  addNote({
+    userId: ctx.from.id,
+    title: noteText,
+    content: noteText,
+    category: "personal",
+    type: "note",
+  });
+
+  noteCreationMode.delete(
+    ctx.from.id
+  );
+
+  await ctx.reply(
+    "✅ Note saved."
+  );
+});
 
 bot.start();
 
