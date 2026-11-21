@@ -1,6 +1,6 @@
 # Nexus Assistant
 
-Personal AI & Automation Assistant inside Telegram.
+Personal Memory & AI Assistant inside Telegram
 
 ## About
 
@@ -43,8 +43,34 @@ Nexus Assistant aims to combine:
 - Settings Module
 - Help Module
 - Profile Module
+- Notes Module
+- Create Notes
+- View Notes
+- Edit Notes
+- Delete Notes
+- Full CRUD Operations
+- Notes Keyboard
+- Notes Database Module
 
 ## Current Version
+
+### v0.5.0 - Notes & Database
+
+Release date: 2026-11-21
+
+Features:
+
+- SQLite Notes Storage
+- Notes Model
+- Notes Repository
+- Notes Service
+- Create Notes
+- View Notes
+- Edit Notes
+- Delete Notes
+- Full CRUD Support
+- Notes Keyboard
+- Notes UI Improvements
 
 ### v0.4.2 - Language Settings
 
@@ -100,23 +126,23 @@ Notes & Database
 
 ### v0.6.0
 
-Email Automation
+Deployment & Portfolio
 
 ### v0.7.0
 
-AI Assistant
+Telegram Mini App
 
 ### v0.8.0
 
-Document Processing
+AI Assistant
 
 ### v0.9.0
 
-Telegram Mini App
+Automations
 
 ### v1.0.0
 
-Production Platform
+Nexus Memory Platform
 
 ## Author
 

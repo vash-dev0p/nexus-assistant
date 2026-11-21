@@ -1,5 +1,26 @@
 # Versions
 
+## v0.5.0 - Notes & Database
+
+Release date: 2026-11-21
+
+Features:
+
+- Notes Model implemented
+- Notes Repository implemented
+- Notes Service implemented
+- SQLite Notes Storage added
+- Create Notes implemented
+- View Notes implemented
+- Edit Notes implemented
+- Delete Notes implemented
+- Full CRUD support implemented
+- Notes Keyboard added
+- Notes UI improved
+- Foundation for future AI Notes
+
+---
+
 ## v0.4.2 - Language Settings
 
 Release date: 2026-11-17

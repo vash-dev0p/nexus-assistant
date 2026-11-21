@@ -166,4 +166,4 @@ bot.on("message:text", async (ctx) => {
 
 bot.start();
 
-console.log("✅ Nexus Assistant v0.4.2 started");
+console.log("✅ Nexus Assistant v0.5.0 started");

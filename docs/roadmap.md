@@ -4,25 +4,28 @@
 Project Foundation
 
 ## v0.2.0
-Navigation Menu
+Navigation System
 
 ## v0.3.0
 User Profiles
 
 ## v0.4.0
-Database Integration
+Language Settings
 
 ## v0.5.0
-Email Automation
+Notes & Database
 
 ## v0.6.0
-AI Assistant
+Deployment & Portfolio
 
 ## v0.7.0
-Document Processing
-
-## v0.8.0
 Telegram Mini App
 
+## v0.8.0
+AI Assistant
+
+## v0.9.0
+Automations
+
 ## v1.0.0
-Production Platform
+Nexus Memory Platform
