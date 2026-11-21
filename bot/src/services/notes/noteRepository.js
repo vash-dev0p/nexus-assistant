@@ -93,8 +93,48 @@ function deleteNoteById(
   );
 }
 
+function updateNoteById(
+  noteId,
+  content,
+  callback
+) {
+  db.run(
+    `
+    UPDATE notes
+    SET
+      title = ?,
+      content = ?,
+      updatedAt = ?
+    WHERE id = ?
+    `,
+    [
+      content,
+      content,
+      new Date().toISOString(),
+      noteId,
+    ],
+    function (err) {
+      if (err) {
+        console.error(
+          "❌ Error updating note:",
+          err.message
+        );
+
+        callback(false);
+      } else {
+        console.log(
+          `✅ Note updated: ${noteId}`
+        );
+
+        callback(true);
+      }
+    }
+  );
+}
+
 module.exports = {
   createNote,
   getNotesByUserId,
   deleteNoteById,
+  updateNoteById,
 };

@@ -2,6 +2,7 @@ const {
   createNote,
   getNotesByUserId,
   deleteNoteById,
+  updateNoteById,
 } = require("./noteRepository");
 
 const {
@@ -30,8 +31,21 @@ function deleteNote(
   );
 }
 
+function updateNote(
+  noteId,
+  content,
+  callback
+) {
+  updateNoteById(
+    noteId,
+    content,
+    callback
+  );
+}
+
 module.exports = {
   addNote,
   getUserNotes,
   deleteNote,
+  updateNote,
 };
