@@ -1,23 +1,46 @@
 async function supportCommand(ctx) {
   await ctx.reply(
-    `❤️ Support Nexus
+`❤️ Support Nexus Memory
 
-Nexus Assistant is an independent project.
+Nexus Memory is an independent project created and maintained by a solo developer.
 
-Your support helps us build:
+Your support helps cover:
 
-• AI Assistant
-• Automation Tools
-• Telegram Mini App
-• Future Integrations
+💻 Development and learning
 
-Donation methods:
+🌐 Hosting and infrastructure
 
-TON — coming soon
-USDT — coming soon
-BTC — coming soon
+🤖 AI integrations
 
-Thank you for supporting Nexus Assistant.`
+📱 Telegram Mini App development
+
+🧠 Future Nexus Memory features
+
+Support helps the author continue building and improving the platform.
+
+Current support methods:
+
+💎 TON — coming soon
+
+💎 USDT (TRC20) — coming soon
+
+💎 Bitcoin (BTC) — coming soon
+
+You can also help by:
+
+⭐ Starring the GitHub repository
+
+💡 Sharing ideas and feedback
+
+🐞 Reporting bugs
+
+GitHub:
+https://github.com/vash-dev0p/nexus-assistant
+
+LinkedIn:
+https://www.linkedin.com/in/valentin-shraiber
+
+Thank you for supporting Nexus Memory ❤️`
   );
 }
 
