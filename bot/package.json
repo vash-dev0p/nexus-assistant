@@ -16,6 +16,6 @@
   "dependencies": {
     "dotenv": "^18.0.10",
     "grammy": "^1.46.0",
-    "sqlite3": "^6.0.1"
+    "sqlite3": "^5.1.7"
   }
 }
