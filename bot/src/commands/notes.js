@@ -10,7 +10,10 @@ async function notesCommand(ctx) {
 
 No notes found.
 
-Create your first note soon.`,
+Create your first note.`,
+        {
+          reply_markup: notesKeyboard,
+        },
       );
 
       return;

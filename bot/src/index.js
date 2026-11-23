@@ -108,6 +108,8 @@ bot.on("message:text", async (ctx) => {
 
       if (success) {
         await ctx.reply("✅ Note deleted.");
+
+        await notesCommand(ctx);
       } else {
         await ctx.reply("❌ Note not found.");
       }
@@ -137,6 +139,8 @@ bot.on("message:text", async (ctx) => {
 
       if (success) {
         await ctx.reply("✅ Note updated.");
+
+        await notesCommand(ctx);
       } else {
         await ctx.reply("❌ Note not found.");
       }
@@ -162,8 +166,10 @@ bot.on("message:text", async (ctx) => {
   noteCreationMode.delete(ctx.from.id);
 
   await ctx.reply("✅ Note saved.");
+
+  await notesCommand(ctx);
 });
 
 bot.start();
 
-console.log("✅ Nexus Assistant v0.5.0 started");
+console.log("✅ Nexus Assistant v0.6.0 online");

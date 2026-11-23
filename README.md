@@ -2,11 +2,46 @@
 
 Personal Memory & AI Assistant inside Telegram
 
+## Status
+
+✅ Online and running in production
+
+✅ Hosted on Northflank
+
+✅ Automatic deployment from GitHub
+
+✅ SQLite persistent storage
+
+✅ Telegram Bot available 24/7
+
+---
+
+## Current Version
+
+### v0.6.0 - Cloud Deployment Release
+
+Release date: 2026-11-23
+
+---
+
+## Tech Stack
+
+- Node.js
+- Grammy
+- SQLite
+- GitHub
+- Northflank
+- Telegram Bot API
+
+---
+
 ## About
 
 Nexus Assistant is a long-term project that evolves from a simple Telegram bot into a complete AI-powered automation platform.
 
 The project is being developed step by step as a public portfolio and product journey.
+
+---
 
 ## Vision
 
@@ -22,6 +57,8 @@ Nexus Assistant aims to combine:
 - Wallet & Payments
 - Future TON Integration
 
+---
+
 ## Supported Languages
 
 - 🇬🇧 English
@@ -29,20 +66,28 @@ Nexus Assistant aims to combine:
 - 🇷🇺 Russian
 - 🇬🇪 Georgian
 
+---
+
 ## Implemented Features
+
+### Core Platform
 
 - Telegram Bot Core
 - Navigation System
 - Home Navigation
-- User Profiles
 - User Registration System
 - User Activity Tracking
-- SQLite Integration
+
+### User Management
+
+- User Profiles
+- Profile Module
 - Language Settings
 - User Language Persistence
-- Settings Module
-- Help Module
-- Profile Module
+- Multi-language Support (EN, ES, RU, KA)
+
+### Notes System
+
 - Notes Module
 - Create Notes
 - View Notes
@@ -52,7 +97,62 @@ Nexus Assistant aims to combine:
 - Notes Keyboard
 - Notes Database Module
 
-## Current Version
+### Infrastructure
+
+- SQLite Integration
+- Production Cloud Deployment
+- GitHub CI/CD
+- Automatic Deployment
+- Northflank Hosting
+- 24/7 Availability
+
+### Additional Modules
+
+- Settings Module
+- Help Module
+
+---
+
+## Screenshots
+
+### Main Menu
+
+Coming soon
+
+### Notes Module
+
+Coming soon
+
+### Language Settings
+
+Coming soon
+
+### Production Deployment
+
+Coming soon
+
+---
+
+## Version History
+
+### v0.6.0 - Cloud Deployment Release
+
+Release date: 2026-11-23
+
+Features:
+
+- First successful cloud deployment
+- Northflank hosting configured
+- GitHub CI/CD pipeline configured
+- Automatic deployment enabled
+- SQLite persistence in production
+- Telegram Bot available 24/7
+- Notes CRUD validated in cloud
+- User Profiles validated in cloud
+- Multi-language support validated in cloud
+- Deployment documentation added
+
+---
 
 ### v0.5.0 - Notes & Database
 
@@ -72,6 +172,8 @@ Features:
 - Notes Keyboard
 - Notes UI Improvements
 
+---
+
 ### v0.4.2 - Language Settings
 
 Release date: 2026-11-17
@@ -87,6 +189,8 @@ Features:
 - Map cache synchronization improved
 - First fully functional user preference added
 
+---
+
 ### v0.4.1 - UX & Navigation Update
 
 Release date: 2026-11-15
@@ -100,6 +204,8 @@ Features:
 - Start flow improved
 - Navigation usability enhanced
 - Registration moved to application entry point
+
+---
 
 ### v0.3.0 - User Profiles
 
@@ -118,32 +224,51 @@ Features:
 - Foundation for subscriptions
 - Foundation for NX Credits
 
+---
+
 ## Roadmap
 
-### v0.5.0
+### ✅ v0.1.0
+Foundation
 
+### ✅ v0.2.0
+Navigation System
+
+### ✅ v0.3.0
+User Profiles
+
+### ✅ v0.4.0
+Language Settings
+
+### ✅ v0.5.0
 Notes & Database
 
-### v0.6.0
+### ✅ v0.6.0
+Cloud Deployment Release
 
-Deployment & Portfolio
-
-### v0.7.0
-
+### 🚧 v0.7.0
 Telegram Mini App
 
-### v0.8.0
-
+### 🔮 v0.8.0
 AI Assistant
 
-### v0.9.0
-
+### 🔮 v0.9.0
 Automations
 
-### v1.0.0
-
+### 🎯 v1.0.0
 Nexus Memory Platform
+
+---
+
+## Documentation
+
+- docs/architecture.md
+- docs/roadmap.md
+- docs/versions.md
+- docs/deployment.md
+
+---
 
 ## Author
 
-Created and maintained by vash-dev0p.
+Created and maintained by **vash-dev0p**.

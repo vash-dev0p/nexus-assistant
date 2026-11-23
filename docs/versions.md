@@ -1,5 +1,25 @@
 # Versions
 
+## v0.6.0 - Cloud Deployment Release
+
+Release date: 2026-11-23
+
+Features:
+
+- First successful cloud deployment
+- Northflank hosting configured
+- GitHub CI/CD pipeline configured
+- Automatic deployment enabled
+- SQLite running in production
+- Telegram Bot available 24/7
+- Production environment validated
+- Notes CRUD validated in cloud
+- User Profiles validated in cloud
+- Multi-language support validated in cloud
+- Build and deployment documentation added
+
+---
+
 ## v0.5.0 - Notes & Database
 
 Release date: 2026-11-21

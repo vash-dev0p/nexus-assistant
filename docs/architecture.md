@@ -1,32 +1,88 @@
 # Architecture
 
-Nexus Assistant consists of:
+## Production Infrastructure
 
-## Telegram Layer
+GitHub Repository
+
+↓
+
+Northflank Cloud Hosting
+
+↓
+
+Nexus Assistant
+
+↓
+
+SQLite Database
+
+↓
+
+Telegram Users
+
+---
+
+## Application Architecture
+
+### Telegram Layer
 
 - Commands
 - Keyboards
 - Message Handlers
 
-## Service Layer
+### Service Layer
 
 - User Service
 - Notes Service
 
-## Repository Layer
+### Repository Layer
 
 - User Repository
 - Notes Repository
 
-## Database Layer
+### Database Layer
 
 - SQLite Database
 
-## Modules
+---
+
+## Current Modules
+
+### User Management
 
 - User Profiles
+- User Registration
+- User Activity Tracking
+
+### Localization
+
 - Language Settings
-- Notes Module
+- Multi-language Support
+  - English
+  - Spanish
+  - Russian
+  - Georgian
+
+### Notes System
+
+- Create Notes
+- View Notes
+- Edit Notes
+- Delete Notes
+- Full CRUD Operations
+
+---
+
+## Infrastructure
+
+- Node.js
+- Grammy
+- SQLite
+- GitHub
+- Northflank
+- Automatic Deployment (CI/CD)
+
+---
 
 ## Future Modules
 
@@ -35,11 +91,14 @@ Nexus Assistant consists of:
 - Telegram Mini App
 - Memory Search
 - Voice Notes
+- Email Integration
+- Payments
+- Subscription System
+
+---
 
 ## Long-Term Vision
 
 Nexus Assistant evolves into Nexus Memory:
 
-A digital memory platform that helps users
-capture, organize, search and understand
-their personal and business knowledge.
+A digital memory platform that helps users capture, organize, search and understand their personal and business knowledge.
