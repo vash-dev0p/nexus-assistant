@@ -167,8 +167,3 @@ bot.on("message:text", async (ctx) => {
 bot.start();
 
 console.log("✅ Nexus Assistant v0.5.0 started");
-console.log("BOT TOKEN:", !!process.env.BOT_TOKEN);
-
-setInterval(() => {
-  console.log("❤️ ALIVE");
-}, 10000);
