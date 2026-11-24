@@ -6,49 +6,46 @@ async function aboutCommand(ctx) {
 
 Digital Memory Platform
 
-Nexus Assistant is the first application in the Nexus ecosystem.
+Nexus Assistant is the first operational module of the Nexus ecosystem.
 
-The long-term vision of Nexus is to create a family of tools that help people capture, organize and use their knowledge, memories and experience.
+The mission of Nexus is to help people capture, organize, search and use their personal and professional knowledge more effectively.
 
 Current ecosystem vision:
 
 🧠 Nexus Memory
-Personal and business memory platform.
+A personal and business memory platform.
 
 🤖 Nexus Assistant
-AI-powered assistant for daily tasks, notes and knowledge management.
-
-🌍 Nexus Translator
-Real-time conversation and translation tools.
+A Telegram-based productivity and knowledge assistant.
 
 ⚡ Nexus Automations
 Workflow automation and productivity tools.
 
 📱 Nexus Mini Apps
-Modern interfaces for Telegram and future mobile platforms.
+Modern interfaces for Telegram and future platforms.
 
-Current Version:
+🌍 Future Nexus Services
+Additional tools connected through a unified memory ecosystem.
 
-v0.5.0 Notes & Database
+Current capabilities:
 
 ✅ User Profiles
 ✅ Multi-language Support
-✅ SQLite Database
-✅ Notes CRUD
+✅ SQLite Storage
+✅ Notes Management
+✅ Cloud Deployment
+✅ Automatic Updates
+✅ 24/7 Availability
 
-Road to the future:
+Project Status:
 
-🌐 Deployment
-📱 Telegram Mini App
-🤖 AI Assistant
-⚡ Automations
+🚀 Active Development
 
 GitHub:
 https://github.com/vash-dev0p/nexus-assistant
 
 LinkedIn:
-https://www.linkedin.com/in/valentin-shraiber
-`,
+https://www.linkedin.com/in/valentin-shraiber`,
   );
 }
 
