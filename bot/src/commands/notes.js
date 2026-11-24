@@ -2,6 +2,8 @@ const { getUserNotes } = require("../services/notes/noteService");
 
 const notesKeyboard = require("../keyboards/notesKeyboard");
 
+const noteInlineKeyboard = require("../keyboards/noteInlineKeyboard");
+
 async function notesCommand(ctx) {
   getUserNotes(ctx.from.id, async (notes) => {
     if (notes.length === 0) {
@@ -19,23 +21,24 @@ Create your first note.`,
       return;
     }
 
-    let message = `📝 Your Notes\n\n`;
+    await ctx.reply(
+      `📝 Your Notes
 
-    notes.forEach((note) => {
+Total: ${notes.length} notes`,
+    );
+
+    for (const note of notes) {
       const createdDate = note.createdAt.split("T")[0];
 
-      message += `📝 ${note.title}\n`;
+      await ctx.reply(
+        `📝 ${note.title}
 
-      message += `📅 ${createdDate}\n`;
-
-      message += `────────────────\n\n`;
-    });
-
-    message += `\nTotal: ${notes.length} notes`;
-
-    await ctx.reply(message, {
-      reply_markup: notesKeyboard,
-    });
+ 📅 ${createdDate}`,
+        {
+          reply_markup: noteInlineKeyboard(note.id),
+        },
+      );
+    }
   });
 }
 
