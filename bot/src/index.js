@@ -99,6 +99,24 @@ bot.hears("🇬🇪 Georgian", async (ctx) => {
 bot.hears("ℹ️ About", aboutCommand);
 bot.hears("❓ Help", helpCommand);
 
+bot.callbackQuery(/^delete_/, async (ctx) => {
+  const noteId = Number(ctx.callbackQuery.data.replace("delete_", ""));
+
+  deleteNote(noteId, async (success) => {
+    if (success) {
+      await ctx.answerCallbackQuery({
+        text: "✅ Note deleted",
+      });
+
+      await ctx.editMessageText("🗑 Note deleted.");
+    } else {
+      await ctx.answerCallbackQuery({
+        text: "❌ Note not found",
+      });
+    }
+  });
+});
+
 bot.on("message:text", async (ctx) => {
   if (noteDeleteMode.has(ctx.from.id)) {
     const noteId = Number(ctx.message.text);
