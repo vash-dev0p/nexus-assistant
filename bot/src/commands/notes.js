@@ -26,7 +26,9 @@ Create your first note.`,
 
       message += `📝 ${note.title}\n`;
 
-      message += `📅 ${createdDate}\n\n`;
+      message += `📅 ${createdDate}\n`;
+
+      message += `────────────────\n\n`;
     });
 
     message += `\nTotal: ${notes.length} notes`;
