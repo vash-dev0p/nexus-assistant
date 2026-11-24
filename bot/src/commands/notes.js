@@ -24,7 +24,7 @@ Create your first note.`,
     notes.forEach((note) => {
       const createdDate = note.createdAt.split("T")[0];
 
-      message += `${note.id}. ${note.title}\n`;
+      message += `📝 ${note.title}\n`;
 
       message += `📅 ${createdDate}\n\n`;
     });
