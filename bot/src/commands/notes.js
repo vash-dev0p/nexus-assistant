@@ -25,6 +25,9 @@ Create your first note.`,
       `📝 Your Notes
 
 Total: ${notes.length} notes`,
+      {
+        reply_markup: notesKeyboard,
+      },
     );
 
     for (const note of notes) {
