@@ -117,6 +117,18 @@ bot.callbackQuery(/^delete_/, async (ctx) => {
   });
 });
 
+bot.callbackQuery(/^edit_/, async (ctx) => {
+  const noteId = Number(ctx.callbackQuery.data.replace("edit_", ""));
+
+  noteEditMode.set(ctx.from.id, noteId);
+
+  await ctx.answerCallbackQuery({
+    text: "✏ Edit mode",
+  });
+
+  await ctx.reply("✏ Send new note text.");
+});
+
 bot.on("message:text", async (ctx) => {
   if (noteDeleteMode.has(ctx.from.id)) {
     const noteId = Number(ctx.message.text);
