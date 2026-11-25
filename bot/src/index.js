@@ -109,6 +109,8 @@ bot.callbackQuery(/^delete_/, async (ctx) => {
       });
 
       await ctx.editMessageText("🗑 Note deleted.");
+
+      await notesCommand(ctx);
     } else {
       await ctx.answerCallbackQuery({
         text: "❌ Note not found",
