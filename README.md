@@ -96,6 +96,10 @@ Nexus Assistant aims to combine:
 - Full CRUD Operations
 - Notes Keyboard
 - Notes Database Module
+- Inline Note Editing
+- Inline Note Deletion
+- Notes Card Interface
+- Hidden Database IDs
 
 ### Infrastructure
 
@@ -117,19 +121,19 @@ Nexus Assistant aims to combine:
 
 ### Main Menu
 
-Coming soon
+![Home Screen](assets/screenshots/home-screen.png)
 
 ### Notes Module
 
-Coming soon
+![Notes Screen](assets/screenshots/notes-screen.png)
+
+### About Nexus
+
+![About Screen](assets/screenshots/about-screen.png)
 
 ### Language Settings
 
-Coming soon
-
-### Production Deployment
-
-Coming soon
+![Settings Screen](assets/screenshots/settings-screen.png)
 
 ---
 
@@ -150,6 +154,11 @@ Features:
 - Notes CRUD validated in cloud
 - User Profiles validated in cloud
 - Multi-language support validated in cloud
+- Hidden note database IDs
+- Notes card-based interface
+- Inline note editing
+- Inline note deletion
+- Improved Notes UX
 - Deployment documentation added
 
 ---
@@ -245,6 +254,15 @@ Notes & Database
 
 ### ✅ v0.6.0
 Cloud Deployment Release
+
+### 🚧 v0.6.1
+
+UX Polish
+
+- Better Notes synchronization
+- Cleaner service messages
+- Notes UI refinement
+- Chat history cleanup
 
 ### 🚧 v0.7.0
 Telegram Mini App
